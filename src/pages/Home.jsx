@@ -9,7 +9,7 @@ const Home = () => {
 
   const { address, contract, getCampaigns } = useStateContext();
 
-  const fetchCampaigns = async () => {
+  const fetchCampaigns = async () => { //coz we cannot call async function immediately inside use effect
     setIsLoading(true);
     const data = await getCampaigns();
     setCampaigns(data);

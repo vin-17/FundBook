@@ -28,14 +28,17 @@ const CreateCampaign = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();   //stop reloading page 
-
+    
+    // image passed is valid image url 
     checkIfImage(form.image, async (exists) => {
       if(exists) {
         setIsLoading(true)
+        // smart contract calls take time  and converting target from 0.5 to sub unit of eth and 18 decimals ie one eth weight
         await createCampaign({ ...form, target: ethers.utils.parseUnits(form.target, 18)})
         setIsLoading(false);
-        navigate('/');
+        navigate('/'); //to see it on the dashboard
       } else {
+        // if not valid 
         alert('Provide valid image URL')
         setForm({ ...form, image: '' });
       }
