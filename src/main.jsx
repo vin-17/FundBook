@@ -10,8 +10,8 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    //thirwebprovider gonn be wrapper for entire applicn
-   <ThirdwebProvider desiredChainId={ChainId.Goerli}> 
+    //thirwebprovider is going to be wrapper for entire application
+   <ThirdwebProvider activeChain={ChainId.Goerli}> 
     <Router>
       <StateContextProvider>
         <App />
