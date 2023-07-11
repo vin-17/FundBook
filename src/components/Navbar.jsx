@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useStateContext } from '../context';
 import { CustomButton } from './';
-import { logo, menu, search, thirdweb } from '../assets';  //icons
+import { logo, menu, search, thirdweb, fundIcon } from '../assets';  //icons
 import { navlinks } from '../constants';
 
 const Navbar = () => {
@@ -15,6 +15,10 @@ const Navbar = () => {
   return (
     //wrapper div
     <div className="flex  md:flex-row flex-col-reverse justify-between mb-[45px] gap-6">
+      <div className='flex gap-1'>
+        <h3 className="m-auto font-epilogue font-semibold text-[26px] text-white text-left leading-[26px] truncate">FundBook</h3>
+      
+      </div>
       
       {/* button thats gonna appear on the right side */}
       <div className="ml-auto sm:flex hidden flex-row justify-end gap-4">

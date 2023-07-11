@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { logo, sun } from '../assets';
+import { logo, sun, fundIcon } from '../assets';
 import { navlinks } from '../constants';
 //to show the highlighted button
 const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
@@ -21,8 +21,9 @@ const Sidebar = () => {
   return (
     //wrapper for entire sidebar
     <div className="flex justify-between items-center flex-col sticky top-5">
-      <Link to="/"> {/*home page link */}
-        <Icon styles="w-[52px] h-[52px] bg-[#2c2f32]" imgUrl={logo} />
+      {/*home page link */}
+      <Link to="/"> 
+        <Icon className="" styles="w-[60px] h-[60px] bg-[#2c2f32] " imgUrl={fundIcon}/>
       </Link>
       
       {/* //other items of sidebar */}
