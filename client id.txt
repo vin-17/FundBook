@@ -1,0 +1,6 @@
+client id
+81e525caa11083b2b692904812d963d2
+
+secret key
+
+smSS5NGJYNhRTao6Wz-g3HxFIi8yQiv9bwqtUx8yrdlcpK6ctbDLnBxW-4ZmfOrc51OYQivcawmSyGCDKfsE2A
