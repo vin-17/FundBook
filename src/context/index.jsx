@@ -8,9 +8,10 @@ const StateContext = createContext();
 
 // export context provide 
 export const StateContextProvider = ({ children }) => {
-  const { contract } = useContract('0x6F4D464353157E93B6031c02444Ae6d4CC4Cb355'); //address from thirdweb dashboard
-
-  const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign'); //call the function then create campaign by passing all paramteres to it
+  //address from thirdweb dashboard
+  const { contract } = useContract('0x6F4D464353157E93B6031c02444Ae6d4CC4Cb355'); 
+  //call the function then create campaign by passing all paramteres to it
+  const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign'); 
 
   const address = useAddress();   //address of smart wallet
   const connect = useMetamask();  //to connect our smart wallet
@@ -18,14 +19,6 @@ export const StateContextProvider = ({ children }) => {
   const publishCampaign = async (form) => {
     // wrapped up in try and catch 
     try {
-      // const data = await createCampaign([       // according to order as defined in web3 crowdfund.sol
-      //   address, // owner whos creating campaign
-      //   form.title, // title
-      //   form.description, // description
-      //   form.target,
-      //   new Date(form.deadline).getTime(), // deadline,
-      //   form.image
-      // ])
       const data = await createCampaign({
 				args: [
 					address, // owner
@@ -46,7 +39,7 @@ export const StateContextProvider = ({ children }) => {
   const getCampaigns = async () => {
     const campaigns = await contract.call('getCampaigns');
 
-    const parsedCampaings = campaigns.map((campaign, i) => ({
+    const parsedCampaings = campaigns.map( (campaign, i) => ({
       owner: campaign.owner,
       title: campaign.title,
       description: campaign.description,
