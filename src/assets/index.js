@@ -13,6 +13,7 @@ import money from './money.svg';
 import loader from './loader.svg';
 import thirdweb from './thirdweb.png';
 import fundIcon from './fundIcon.png';
+import profileLogo from './profileLogo.png';
 
 export {
   tagType,
@@ -30,4 +31,5 @@ export {
   loader,
   thirdweb,
   fundIcon,
+  profileLogo,
 };

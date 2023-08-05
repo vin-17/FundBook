@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useStateContext } from '../context';
 import { CustomButton } from './';
-import { logo, menu, search, thirdweb, fundIcon } from '../assets';  //icons
+import { logo, menu, search, thirdweb, fundIcon, profileLogo } from '../assets';  //icons
 import { navlinks } from '../constants';
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
         
         <Link to="/profile"> 
           <div className="w-[52px] h-[52px] rounded-full bg-[#2c2f32] flex justify-center items-center cursor-pointer">
-            <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain" />
+            <img src={profileLogo} alt="user" className="object-fill bg-[#525256] rounded-full" />
           </div>
         </Link>
       </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* Small screen navigation */}
         <div className="sm:hidden flex justify-between items-center relative">
           {/* container for image */}
-        <div className="w-[40px] h-[40px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer">
+        <div className="w-[80px] h-[80px] rounded-[10px] bg-[#2c2f32] flex justify-center items-center cursor-pointer">
             <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain" />
           </div>
           to show menu
